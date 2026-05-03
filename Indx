@@ -1,0 +1,1036 @@
+
+<!DOCTYPE html>
+
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>אבנות קסם – אבנות, קריסטלים וצדפים</title>
+
+<!-- Accessibility: Skip links -->
+
+<a href="#main-content" class="skip-link" tabindex="0">דלג לתוכן הראשי</a>
+
+<style>
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+--cream: #fdf8f0;
+--sand: #e8d9c0;
+--stone: #b5956a;
+--deep: #4a3728;
+--teal: #2a7c7a;
+--teal-light: #3da8a5;
+--shell: #f2c8a0;
+--crystal: #c9dde8;
+--amethyst: #7e5e8a;
+--gold: #c9a84c;
+--text: #2d1f14;
+--text-light: #5c4033;
+--white: #ffffff;
+
+--font-display: 'Frank Ruhl Libre', 'David Libre', Georgia, serif;
+--font-body: 'Heebo', 'Segoe UI', Arial, sans-serif;
+
+--radius: 16px;
+--shadow: 0 8px 40px rgba(74,55,40,0.13);
+--shadow-lg: 0 20px 60px rgba(74,55,40,0.2);
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+:root {
+--cream: #ffffff;
+--text: #000000;
+--teal: #005a58;
+--deep: #000000;
+--stone: #7a5a30;
+}
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+*, *::before, *::after {
+animation-duration: 0.01ms !important;
+transition-duration: 0.01ms !important;
+}
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+font-family: var(--font-body);
+background: var(--cream);
+color: var(--text);
+line-height: 1.7;
+direction: rtl;
+overflow-x: hidden;
+}
+
+/* ===== SKIP LINK ===== */
+.skip-link {
+position: absolute;
+top: -100px;
+right: 0;
+background: var(--teal);
+color: white;
+padding: 12px 24px;
+border-radius: 0 0 0 12px;
+font-size: 1rem;
+font-weight: 700;
+z-index: 9999;
+text-decoration: none;
+transition: top 0.2s;
+}
+.skip-link:focus { top: 0; }
+
+/* ===== ACCESSIBILITY TOOLBAR ===== */
+.a11y-bar {
+background: var(--deep);
+color: white;
+padding: 10px 24px;
+display: flex;
+align-items: center;
+gap: 12px;
+flex-wrap: wrap;
+font-size: 0.85rem;
+}
+.a11y-bar span { margin-left: 8px; font-weight: 600; }
+.a11y-btn {
+background: rgba(255,255,255,0.15);
+border: 2px solid rgba(255,255,255,0.4);
+color: white;
+padding: 6px 14px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 0.85rem;
+font-family: var(--font-body);
+transition: background 0.2s, border-color 0.2s;
+display: flex; align-items: center; gap: 6px;
+}
+.a11y-btn:hover, .a11y-btn:focus {
+background: rgba(255,255,255,0.3);
+border-color: white;
+outline: 3px solid var(--teal-light);
+outline-offset: 2px;
+}
+.a11y-btn.active { background: var(--teal); border-color: var(--teal-light); }
+
+/* ===== LARGE TEXT MODE ===== */
+body.large-text { font-size: 120%; }
+body.large-text h1 { font-size: 3rem; }
+body.large-text h2 { font-size: 2.2rem; }
+body.large-text h3 { font-size: 1.6rem; }
+
+/* ===== HIGH CONTRAST MODE ===== */
+body.high-contrast {
+--cream: #000000;
+--text: #ffffff;
+--text-light: #eeeeee;
+--teal: #00ffff;
+--stone: #ffff00;
+--deep: #ffffff;
+--sand: #333333;
+--shell: #ff8800;
+--crystal: #aaaaff;
+--amethyst: #ff66ff;
+--gold: #ffff00;
+}
+body.high-contrast .hero { background: #000 !important; }
+body.high-contrast .card { background: #111; border: 2px solid #fff; }
+body.high-contrast .nav { background: #000; border-bottom: 2px solid #fff; }
+
+/* ===== FOCUS STYLES ===== */
+*:focus-visible {
+outline: 3px solid var(--teal);
+outline-offset: 3px;
+border-radius: 4px;
+}
+
+/* ===== NAVBAR ===== */
+.nav {
+position: sticky;
+top: 0;
+z-index: 100;
+background: rgba(253,248,240,0.95);
+backdrop-filter: blur(10px);
+border-bottom: 1px solid var(--sand);
+padding: 14px 32px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.nav-logo {
+font-family: var(--font-display);
+font-size: 1.5rem;
+color: var(--deep);
+font-weight: 700;
+text-decoration: none;
+}
+.nav-logo span { color: var(--teal); }
+.nav-links {
+display: flex;
+gap: 24px;
+list-style: none;
+}
+.nav-links a {
+color: var(--text-light);
+text-decoration: none;
+font-size: 0.95rem;
+font-weight: 500;
+padding: 6px 2px;
+border-bottom: 2px solid transparent;
+transition: color 0.2s, border-color 0.2s;
+}
+.nav-links a:hover, .nav-links a:focus {
+color: var(--teal);
+border-bottom-color: var(--teal);
+}
+
+/* ===== HERO ===== */
+.hero {
+min-height: 92vh;
+background:
+radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.15) 0%, transparent 60%),
+radial-gradient(ellipse at 80% 30%, rgba(126,94,138,0.12) 0%, transparent 50%),
+radial-gradient(ellipse at 50% 80%, rgba(61,168,165,0.1) 0%, transparent 60%),
+linear-gradient(160deg, #fdf8f0 0%, #f5eadb 40%, #ede0ce 100%);
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 60px 24px;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background-image:
+radial-gradient(circle at 15% 25%, rgba(201,221,232,0.4) 0, rgba(201,221,232,0) 200px),
+radial-gradient(circle at 85% 70%, rgba(242,200,160,0.3) 0, rgba(242,200,160,0) 250px);
+pointer-events: none;
+}
+
+/* Floating decorative gems */
+.gem {
+position: absolute;
+border-radius: 50%;
+animation: float 6s ease-in-out infinite;
+pointer-events: none;
+opacity: 0.5;
+}
+.gem-1 { width:80px; height:80px; background: radial-gradient(circle, #c9dde8, #7e5e8a); top:10%; left:8%; animation-delay:0s; }
+.gem-2 { width:50px; height:50px; background: radial-gradient(circle, #f2c8a0, #c9a84c); top:60%; left:5%; animation-delay:1.5s; }
+.gem-3 { width:65px; height:65px; background: radial-gradient(circle, #3da8a5, #2a7c7a); top:20%; right:10%; animation-delay:3s; }
+.gem-4 { width:40px; height:40px; background: radial-gradient(circle, #e8d9c0, #b5956a); bottom:20%; right:8%; animation-delay:2s; }
+.gem-5 { width:55px; height:55px; background: radial-gradient(circle, #c9a84c, #f2c8a0); bottom:30%; left:12%; animation-delay:4s; }
+
+@keyframes float {
+0%, 100% { transform: translateY(0) rotate(0deg); }
+50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+.hero-inner { position: relative; z-index: 1; max-width: 780px; }
+
+.hero-badge {
+display: inline-block;
+background: var(--teal);
+color: white;
+padding: 6px 20px;
+border-radius: 50px;
+font-size: 0.85rem;
+font-weight: 600;
+letter-spacing: 0.05em;
+margin-bottom: 24px;
+}
+
+.hero h1 {
+font-family: var(--font-display);
+font-size: clamp(2.2rem, 6vw, 4rem);
+line-height: 1.2;
+color: var(--deep);
+margin-bottom: 20px;
+}
+.hero h1 em {
+font-style: normal;
+color: var(--teal);
+}
+
+.hero-desc {
+font-size: clamp(1rem, 2.5vw, 1.2rem);
+color: var(--text-light);
+max-width: 560px;
+margin: 0 auto 36px;
+}
+
+.hero-cta {
+display: flex;
+gap: 16px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+padding: 14px 28px;
+border-radius: 50px;
+font-size: 1rem;
+font-weight: 700;
+font-family: var(--font-body);
+text-decoration: none;
+cursor: pointer;
+border: none;
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:focus { outline: 3px solid var(--teal); outline-offset: 3px; }
+
+.btn-primary {
+background: var(--teal);
+color: white;
+box-shadow: 0 6px 24px rgba(42,124,122,0.35);
+}
+.btn-primary:hover { box-shadow: 0 10px 32px rgba(42,124,122,0.5); }
+
+.btn-wa {
+background: #25D366;
+color: white;
+box-shadow: 0 6px 24px rgba(37,211,102,0.3);
+}
+.btn-wa:hover { box-shadow: 0 10px 32px rgba(37,211,102,0.5); }
+
+.btn-outline {
+background: transparent;
+color: var(--teal);
+border: 2px solid var(--teal);
+}
+.btn-outline:hover { background: var(--teal); color: white; }
+
+/* ===== READ PAGE BUTTON ===== */
+.read-btn {
+display: flex;
+align-items: center;
+gap: 10px;
+background: var(--amethyst);
+color: white;
+border: none;
+padding: 14px 28px;
+border-radius: 50px;
+font-size: 1rem;
+font-weight: 700;
+font-family: var(--font-body);
+cursor: pointer;
+box-shadow: 0 6px 24px rgba(126,94,138,0.3);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.read-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 32px rgba(126,94,138,0.5); }
+.read-btn:focus { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+/* ===== SECTION BASE ===== */
+section { padding: 80px 24px; }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-label {
+text-align: center;
+font-size: 0.8rem;
+font-weight: 700;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+color: var(--teal);
+margin-bottom: 12px;
+}
+.section-title {
+text-align: center;
+font-family: var(--font-display);
+font-size: clamp(1.8rem, 4vw, 2.8rem);
+color: var(--deep);
+margin-bottom: 16px;
+}
+.section-sub {
+text-align: center;
+color: var(--text-light);
+max-width: 600px;
+margin: 0 auto 56px;
+font-size: 1.05rem;
+}
+
+/* ===== CARDS GRID ===== */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+
+.card {
+background: white;
+border-radius: var(--radius);
+padding: 36px 28px;
+box-shadow: var(--shadow);
+transition: transform 0.3s, box-shadow 0.3s;
+position: relative;
+overflow: hidden;
+}
+.card::before {
+content: '';
+position: absolute;
+top: 0; right: 0;
+width: 120px; height: 120px;
+border-radius: 0 var(--radius) 0 120px;
+opacity: 0.12;
+transition: opacity 0.3s;
+}
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.card:hover::before { opacity: 0.25; }
+
+.card-stones::before { background: var(--teal); }
+.card-crystals::before { background: var(--amethyst); }
+.card-shells::before { background: var(--shell); }
+
+.card-icon {
+font-size: 3rem;
+margin-bottom: 20px;
+display: block;
+line-height: 1;
+}
+.card h3 {
+font-family: var(--font-display);
+font-size: 1.5rem;
+color: var(--deep);
+margin-bottom: 12px;
+}
+.card p { color: var(--text-light); line-height: 1.7; margin-bottom: 16px; }
+.card-tag {
+display: inline-block;
+background: var(--cream);
+color: var(--stone);
+padding: 4px 14px;
+border-radius: 50px;
+font-size: 0.8rem;
+font-weight: 600;
+border: 1px solid var(--sand);
+}
+
+/* ===== PROPERTIES SECTION ===== */
+.props-section { background: linear-gradient(160deg, #f5eadb, #ede0ce); }
+
+.props-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+
+.prop-item {
+background: white;
+border-radius: 12px;
+padding: 24px 20px;
+text-align: center;
+box-shadow: 0 4px 20px rgba(74,55,40,0.08);
+transition: transform 0.2s;
+}
+.prop-item:hover { transform: translateY(-4px); }
+.prop-icon { font-size: 2.2rem; margin-bottom: 12px; display: block; }
+.prop-item h4 { font-family: var(--font-display); font-size: 1.1rem; color: var(--deep); margin-bottom: 8px; }
+.prop-item p { font-size: 0.9rem; color: var(--text-light); }
+
+/* ===== CONTACT SECTION ===== */
+.contact-section { background: var(--deep); color: white; text-align: center; }
+.contact-section .section-title { color: white; }
+.contact-section .section-sub { color: rgba(255,255,255,0.7); }
+
+.phones {
+display: flex;
+justify-content: center;
+gap: 24px;
+flex-wrap: wrap;
+margin-bottom: 36px;
+}
+.phone-card {
+background: rgba(255,255,255,0.1);
+border: 1px solid rgba(255,255,255,0.2);
+border-radius: var(--radius);
+padding: 24px 32px;
+min-width: 220px;
+}
+.phone-card .phone-label { font-size: 0.8rem; opacity: 0.7; margin-bottom: 8px; letter-spacing: 0.08em; }
+.phone-card a {
+color: white;
+font-size: 1.4rem;
+font-weight: 700;
+text-decoration: none;
+display: block;
+direction: ltr;
+}
+.phone-card a:hover { color: var(--teal-light); text-decoration: underline; }
+
+.contact-btns {
+display: flex;
+gap: 16px;
+justify-content: center;
+flex-wrap: wrap;
+}
+
+/* ===== FOOTER ===== */
+footer {
+background: #2d1f14;
+color: rgba(255,255,255,0.6);
+text-align: center;
+padding: 24px;
+font-size: 0.85rem;
+}
+footer a { color: var(--teal-light); }
+
+/* ===== SCREEN READER UTILS ===== */
+.sr-only {
+position: absolute !important;
+width: 1px !important;
+height: 1px !important;
+overflow: hidden !important;
+clip: rect(0,0,0,0) !important;
+white-space: nowrap !important;
+}
+
+/* ===== READING PROGRESS ===== */
+.read-progress {
+display: none;
+position: fixed;
+bottom: 24px;
+left: 24px;
+background: var(--amethyst);
+color: white;
+padding: 12px 20px;
+border-radius: 50px;
+z-index: 999;
+font-size: 0.9rem;
+font-weight: 600;
+box-shadow: var(--shadow);
+align-items: center;
+gap: 10px;
+}
+.read-progress.visible { display: flex; }
+.stop-btn {
+background: rgba(255,255,255,0.25);
+border: none;
+color: white;
+padding: 4px 12px;
+border-radius: 20px;
+cursor: pointer;
+font-size: 0.85rem;
+font-family: var(--font-body);
+}
+.stop-btn:hover { background: rgba(255,255,255,0.4); }
+
+@media (max-width: 600px) {
+.nav-links { display: none; }
+.a11y-bar { gap: 8px; }
+section { padding: 60px 16px; }
+}
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700;900&family=Heebo:wght@400;500;600;700&display=swap');
+</style>
+
+</head>
+<body>
+
+<!-- ===== ACCESSIBILITY TOOLBAR ===== -->
+
+<div class="a11y-bar" role="toolbar" aria-label="כלי נגישות">
+<span aria-hidden="true">♿ נגישות:</span>
+
+<button class="a11y-btn" id="btn-read-page" onclick="readEntirePage()" aria-label="הקראת כל הדף בקול">
+🔊 הקראת הדף
+</button>
+
+<button class="a11y-btn" id="btn-stop-read" onclick="stopReading()" aria-label="עצור הקראה" style="display:none">
+⏹ עצור הקראה
+</button>
+
+<button class="a11y-btn" id="btn-large-text" onclick="toggleLargeText()" aria-label="הגדל טקסט" aria-pressed="false">
+🔠 טקסט גדול
+</button>
+
+<button class="a11y-btn" id="btn-contrast" onclick="toggleContrast()" aria-label="ניגודיות גבוהה" aria-pressed="false">
+🌓 ניגודיות גבוהה
+</button>
+
+<button class="a11y-btn" onclick="scrollToContact()" aria-label="גלול לפרטי קשר">
+📞 צור קשר
+</button>
+</div>
+
+<!-- Reading progress indicator -->
+
+<div class="read-progress" id="read-progress" role="status" aria-live="polite">
+<span id="read-status">מקריא את הדף...</span>
+<button class="stop-btn" onclick="stopReading()">⏹ עצור</button>
+</div>
+
+<!-- ===== NAVIGATION ===== -->
+
+<nav class="nav" aria-label="ניווט ראשי">
+<a href="#" class="nav-logo" aria-label="עמוד הבית – אבנות קסם">
+אבנות <span>קסם</span>
+</a>
+<ul class="nav-links" role="list">
+<li><a href="#stones" aria-label="עבור לקטע אבנות וקריסטלים">אבנות וקריסטלים</a></li>
+<li><a href="#shells" aria-label="עבור לקטע צדפים">צדפים</a></li>
+<li><a href="#properties" aria-label="עבור לקטע סגולות">סגולות</a></li>
+<li><a href="#contact" aria-label="עבור לקטע יצירת קשר">צור קשר</a></li>
+</ul>
+</nav>
+
+<!-- ===== HERO ===== -->
+
+<main id="main-content">
+<section class="hero" aria-labelledby="hero-title">
+<!-- Decorative floating gems - hidden from screen readers -->
+<div class="gem gem-1" aria-hidden="true" role="presentation"></div>
+<div class="gem gem-2" aria-hidden="true" role="presentation"></div>
+<div class="gem gem-3" aria-hidden="true" role="presentation"></div>
+<div class="gem gem-4" aria-hidden="true" role="presentation"></div>
+<div class="gem gem-5" aria-hidden="true" role="presentation"></div>
+
+<div class="hero-inner">
+<div class="hero-badge" aria-label="קריסטלים, אבנות וצדפים">💎 קריסטלים · אבנות · צדפים</div>
+<h1 id="hero-title">
+עולם של <em>אנרגיה</em><br>ויופי טבעי
+</h1>
+<p class="hero-desc">
+אבנות וקריסטלים מאת הטבע — כל אבן נושאת אנרגיה ייחודית, כל צדף מספר סיפור של הים.
+גלו את האוסף שלנו ומצאו את האבן שמדברת אליכם.
+</p>
+<div class="hero-cta">
+<a href="#stones" class="btn btn-primary" aria-label="גלול לאוסף האבנות שלנו">
+🪨 לאוסף
+</a>
+<a href="#contact" class="btn btn-wa" aria-label="צור קשר בוואטסאפ">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ווטסאפ
+</a>
+<button class="read-btn" onclick="readEntirePage()" aria-label="הקראת כל הדף – לחרשים ולעיוורים">
+🔊 הקראת הדף
+</button>
+</div>
+</div>
+</section>
+
+<!-- ===== STONES & CRYSTALS ===== -->
+
+<section id="stones" aria-labelledby="stones-title">
+<div class="container">
+<p class="section-label" aria-hidden="true">✨ הקסם שמתחת לאדמה</p>
+<h2 class="section-title" id="stones-title">אבנות וקריסטלים</h2>
+<p class="section-sub">
+כל אבן היא יצירת מופת של הטבע, נוצרה על פני מיליוני שנים תחת לחץ ואש.
+הכירו את הגיבורים המרכזיים של עולם הקריסטלים.
+</p>
+
+```
+<div class="cards" role="list">
+
+<article class="card card-crystals" role="listitem" aria-labelledby="amethyst-title">
+<span class="card-icon" aria-hidden="true">💜</span>
+<h3 id="amethyst-title">אמתיסט – אבן הרוגע</h3>
+<p>
+האמתיסט הוא קריסטל סגול-עמוק המוכר בשמו כ"אבן הרוח". נוצר בהתגבשות של סיליקה
+בחללי סלע, הוא מסמל שלווה, בהירות רוחנית ואיזון רגשי. קהילות רבות ברחבי העולם
+משתמשות בו למדיטציה ולהרגעת מתחים.
+</p>
+<span class="card-tag">רוגע · מדיטציה · שינה</span>
+</article>
+
+<article class="card card-stones" role="listitem" aria-labelledby="rose-title">
+<span class="card-icon" aria-hidden="true">🌸</span>
+<h3 id="rose-title">קוורץ ורדרד – אבן האהבה</h3>
+<p>
+הקוורץ הורדרד, בגוונים ורודים-עדינים עד עמוקים, נחשב לאבן האהבה האוניברסלית.
+הוא מעודד פתיחות רגשית, חמלה עצמית וקשרים בין-אישיים עמוקים. מושלם לאנשים
+המחפשים ריפוי לב ובניית קשרים איכותיים.
+</p>
+<span class="card-tag">אהבה · ריפוי רגשי · הרמוניה</span>
+</article>
+
+<article class="card card-crystals" role="listitem" aria-labelledby="obsidian-title">
+<span class="card-icon" aria-hidden="true">🖤</span>
+<h3 id="obsidian-title">אובסידיאן – אבן ההגנה</h3>
+<p>
+האובסידיאן הוא זכוכית וולקנית שחורה-מבריקה, נוצרת מלבת הר געש שהתקררה במהירות.
+היא נחשבת לאבן הגנה חזקה, המגינה מפני אנרגיות שליליות ומסייעת לשחרור
+רגשות כבושים ועומסים נפשיים.
+</p>
+<span class="card-tag">הגנה · שחרור · עוצמה</span>
+</article>
+
+<article class="card card-stones" role="listitem" aria-labelledby="citrine-title">
+<span class="card-icon" aria-hidden="true">💛</span>
+<h3 id="citrine-title">ציטרין – אבן השמש</h3>
+<p>
+הציטרין בצהוב-כתום מלא חיות הוא הקריסטל של שמחה, יצירתיות ושגשוג.
+מכונה "אבן הסוחרים" בגלל אמונה עתיקה שהוא מביא מזל ועסקים טובים.
+הוא מעורר אנרגיה, ביטחון ומוטיבציה לפעולה.
+</p>
+<span class="card-tag">שמחה · שגשוג · יצירתיות</span>
+</article>
+
+<article class="card card-crystals" role="listitem" aria-labelledby="lapis-title">
+<span class="card-icon" aria-hidden="true">🔵</span>
+<h3 id="lapis-title">לאפיס לזולי – אבן החכמה</h3>
+<p>
+הלאפיס לזולי, באבן כחולה-כהה עם נקודות זהב, היה יקר לפרעוני מצרים ולמלכים עתיקים.
+הוא מסמל חכמה, אמת ותקשורת. בעת העתיקה טחנו אותו לאבקת צבע לציורי מאסטרים.
+</p>
+<span class="card-tag">חכמה · אמת · תקשורת</span>
+</article>
+
+<article class="card card-stones" role="listitem" aria-labelledby="tiger-title">
+<span class="card-icon" aria-hidden="true">🐯</span>
+<h3 id="tiger-title">עין הנמר – אבן הגבורה</h3>
+<p>
+עין הנמר בגוונים חומים-זהובים עם נצנץ מיוחד של "חתול עין" היא אבן
+העוז והנחישות. היא עוזרת לקבל החלטות בבהירות, מחזקת בטחון עצמי ומגינה מפני
+עין הרע לפי מסורות רבות.
+</p>
+<span class="card-tag">עוז · בטחון · הצלחה</span>
+</article>
+
+</div>
+```
+
+</div>
+</section>
+
+<!-- ===== SHELLS ===== -->
+
+<section id="shells" style="background: linear-gradient(160deg,#f5eadb,#fdf8f0);" aria-labelledby="shells-title">
+<div class="container">
+<p class="section-label" aria-hidden="true">🌊 מתנות הים</p>
+<h2 class="section-title" id="shells-title">צדפים – שירת הים</h2>
+<p class="section-sub">
+צדפים הם ממש "בתים" שיצרו יצורים ימיים קטנים – ולכל צדף עיצוב מדהים שלו.
+הם מסמלים יופי, שינוי ומחזוריות.
+</p>
+
+```
+<div class="cards" role="list">
+
+<article class="card card-shells" role="listitem" aria-labelledby="cowrie-title">
+<span class="card-icon" aria-hidden="true">🐚</span>
+<h3 id="cowrie-title">ווג'ה – צדף הפוריות</h3>
+<p>
+הווג'ה (Cowrie Shell) הוא אחד הצדפים המוכרים בעולם — חלק, מבריק ובעל צורה
+אובלית מיוחדת. ממצרים העתיקה ועד אפריקה, הוא שימש כמטבע, קמיע פוריות
+ואות מעמד. הוא מסמל אלוהות הים והשפע.
+</p>
+<span class="card-tag">פוריות · שפע · הגנה</span>
+</article>
+
+<article class="card card-shells" role="listitem" aria-labelledby="nautilus-title">
+<span class="card-icon" aria-hidden="true">🌀</span>
+<h3 id="nautilus-title">נוטילוס – ספירלת החיים</h3>
+<p>
+הנוטילוס ידוע בספירלה המתמטית המושלמת שלו — מבנה הנקרא "ספירלת פיבונאצ'י",
+המופיע גם בפריחת חמניות ובסלוף הגלקסיות. הוא מסמל גדילה, שינוי ואינסוף.
+מושלם לאנשים בתהליכי שינוי וצמיחה.
+</p>
+<span class="card-tag">צמיחה · שינוי · אינסוף</span>
+</article>
+
+<article class="card card-shells" role="listitem" aria-labelledby="abalone-title">
+<span class="card-icon" aria-hidden="true">🌈</span>
+<h3 id="abalone-title">אבלון – קשת הים</h3>
+<p>
+צדף האבלון מציג את קשת הצבעים הנדירה ביותר — ירוק, כחול, סגול, ורוד וכסף
+מתחלפים תלוי בזווית האור. יחידות ילידיות רבות באמריקה ובניו זילנד רואות בו
+כלי קדוש להגנה ולטהרה.
+</p>
+<span class="card-tag">יופי · הגנה · טהרה</span>
+</article>
+
+</div>
+```
+
+</div>
+</section>
+
+<!-- ===== PROPERTIES ===== -->
+
+<section id="properties" class="props-section" aria-labelledby="props-title">
+<div class="container">
+<p class="section-label" aria-hidden="true">✨ למה אבנות?</p>
+<h2 class="section-title" id="props-title">סגולות ויתרונות</h2>
+<p class="section-sub">
+עולם האבנות והקריסטלים משלב יופי, היסטוריה ואמונות עתיקות —
+כל אחד מוצא בו את מה שמשמעותי לו.
+</p>
+
+```
+<div class="props-grid" role="list">
+<div class="prop-item" role="listitem">
+<span class="prop-icon" aria-hidden="true">🧘</span>
+<h4>מדיטציה ושקט פנימי</h4>
+<p>קריסטלים רבים משמשים כעוגן למדיטציה ולכניסה למצב של שלווה ומיקוד</p>
+</div>
+<div class="prop-item" role="listitem">
+<span class="prop-icon" aria-hidden="true">💚</span>
+<h4>ריפוי אנרגטי</h4>
+<p>מסורות ריפוי עתיקות ברחבי העולם השתמשו באבנות לטיפול רגשי וגופני</p>
+</div>
+<div class="prop-item" role="listitem">
+<span class="prop-icon" aria-hidden="true">🏠</span>
+<h4>עיצוב הבית</h4>
+<p>אבנות וצדפים הם אלמנטי עיצוב נהדרים שמוסיפים חמימות וייחודיות לכל חלל</p>
+</div>
+<div class="prop-item" role="listitem">
+<span class="prop-icon" aria-hidden="true">🎁</span>
+<h4>מתנות משמעותיות</h4>
+<p>כל אבן נושאת משמעות — מתנה מושלמת לאדם שאוהבים בכל הזדמנות</p>
+</div>
+<div class="prop-item" role="listitem">
+<span class="prop-icon" aria-hidden="true">📚</span>
+<h4>היסטוריה ותרבות</h4>
+<p>אבנות לוות את ההיסטוריה האנושית מימי פרעה ועד עידן המסחר המודרני</p>
+</div>
+<div class="prop-item" role="listitem">
+<span class="prop-icon" aria-hidden="true">⚡</span>
+<h4>אנרגיה ומוטיבציה</h4>
+<p>אנשים רבים מדווחים שנשיאת קריסטל אהוב מעניקה להם אנרגיה ובטחון ביום-יום</p>
+</div>
+</div>
+```
+
+</div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+
+<section id="contact" class="contact-section" aria-labelledby="contact-title">
+<div class="container">
+<p class="section-label" style="color: var(--teal-light)" aria-hidden="true">📞 אנחנו כאן בשבילכם</p>
+<h2 class="section-title" id="contact-title">צרו קשר</h2>
+<p class="section-sub" style="color:rgba(255,255,255,0.7)">
+רוצים לשמוע עוד? מעוניינים להזמין? מוזמנים לפנות אלינו בטלפון או בוואטסאפ — נשמח לעזור!
+</p>
+
+```
+<div class="phones" role="list" aria-label="מספרי טלפון ליצירת קשר">
+<div class="phone-card" role="listitem">
+<p class="phone-label">📱 טלפון 1</p>
+<a href="tel:0549664955" aria-label="חיוג לטלפון 054 966 4955">054-9664955</a>
+</div>
+<div class="phone-card" role="listitem">
+<p class="phone-label">📱 טלפון 2</p>
+<a href="tel:0583656015" aria-label="חיוג לטלפון 058 365 6015">058-3656015</a>
+</div>
+</div>
+
+<div class="contact-btns" role="group" aria-label="כפתורי יצירת קשר בוואטסאפ">
+<a
+href="https://wa.me/9720549664955"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-wa"
+aria-label="פתח שיחת ווטסאפ עם 054-9664955"
+>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ווטסאפ 054-9664955
+</a>
+
+<a
+href="https://wa.me/9720583656015"
+target="_blank"
+rel="noopener noreferrer"
+class="btn btn-wa"
+aria-label="פתח שיחת ווטסאפ עם 058-3656015"
+>
+<svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+ווטסאפ 058-3656015
+</a>
+
+<a href="tel:0549664955" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);color:white;" aria-label="חייג ל-054-9664955">
+📞 054-9664955
+</a>
+<a href="tel:0583656015" class="btn btn-outline" style="border-color:rgba(255,255,255,0.5);color:white;" aria-label="חייג ל-058-3656015">
+📞 058-3656015
+</a>
+</div>
+```
+
+</div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+
+<footer>
+<p>© 2025 אבנות קסם · כל הזכויות שמורות</p>
+<p style="margin-top:6px">
+<a href="#main-content">חזרה לראש הדף ↑</a>
+</p>
+</footer>
+
+<!-- ===== JAVASCRIPT: Accessibility Features ===== -->
+
+<script>
+/* ===== TEXT-TO-SPEECH (הקראה) ===== */
+let synth = window.speechSynthesis;
+let utterance = null;
+let isReading = false;
+
+function getPageText() {
+// Collect all meaningful text from the page
+const sections = [
+"ברוכים הבאים לאבנות קסם – עולם של אנרגיה ויופי טבעי.",
+"אבנות וקריסטלים מאת הטבע. כל אבן נושאת אנרגיה ייחודית, כל צדף מספר סיפור של הים.",
+"",
+"אבנות וקריסטלים:",
+"",
+"אמתיסט – אבן הרוגע. האמתיסט הוא קריסטל סגול-עמוק. הוא מסמל שלווה, בהירות רוחנית ואיזון רגשי. משמש למדיטציה ולהרגעת מתחים.",
+"",
+"קוורץ ורדרד – אבן האהבה. בגוונים ורודים עדינים. מעודד פתיחות רגשית, חמלה עצמית וקשרים בין-אישיים עמוקים.",
+"",
+"אובסידיאן – אבן ההגנה. זכוכית וולקנית שחורה. נחשבת לאבן הגנה חזקה מפני אנרגיות שליליות.",
+"",
+"ציטרין – אבן השמש. בצהוב-כתום. קריסטל של שמחה, יצירתיות ושגשוג.",
+"",
+"לאפיס לזולי – אבן החכמה. כחול-כהה עם נקודות זהב. מסמל חכמה, אמת ותקשורת.",
+"",
+"עין הנמר – אבן הגבורה. בגוונים חומים-זהובים. עוזרת לקבל החלטות בבהירות ומחזקת בטחון עצמי.",
+"",
+"צדפים – שירת הים:",
+"",
+"ווג'ה – צדף הפוריות. אחד הצדפים המוכרים בעולם. שימש כמטבע, קמיע פוריות ואות מעמד.",
+"",
+"נוטילוס – ספירלת החיים. ידוע בספירלה המתמטית המושלמת שלו. מסמל גדילה, שינוי ואינסוף.",
+"",
+"אבלון – קשת הים. צדף עם קשת צבעים נדירה. נחשב בתרבויות ילידיות לכלי קדוש להגנה ולטהרה.",
+"",
+"סגולות ויתרונות: מדיטציה ושקט פנימי, ריפוי אנרגטי, עיצוב הבית, מתנות משמעותיות, היסטוריה ותרבות, אנרגיה ומוטיבציה.",
+"",
+"לפרטים ויצירת קשר:",
+"טלפון ראשון: אפס חמישה ארבע, תשע שש שש ארבע, תשע חמישה חמישה.",
+"טלפון שני: אפס חמישה שמונה, שלוש שש חמישה שש, אפס אחד חמישה.",
+"ניתן גם לפנות אלינו בוואטסאפ.",
+];
+return sections.join(" ");
+}
+
+function readEntirePage() {
+if (!synth) {
+alert("הדפדפן שלך אינו תומך בהקראה. נסה Chrome או Edge.");
+return;
+}
+stopReading();
+
+const text = getPageText();
+utterance = new SpeechSynthesisUtterance(text);
+utterance.lang = 'he-IL';
+utterance.rate = 0.9;
+utterance.pitch = 1;
+
+// Try to find Hebrew voice
+const voices = synth.getVoices();
+const heVoice = voices.find(v => v.lang.startsWith('he'));
+if (heVoice) utterance.voice = heVoice;
+
+utterance.onstart = () => {
+isReading = true;
+document.getElementById('read-progress').classList.add('visible');
+document.getElementById('read-status').textContent = 'מקריא את הדף...';
+document.getElementById('btn-stop-read').style.display = 'flex';
+};
+utterance.onend = () => {
+isReading = false;
+document.getElementById('read-progress').classList.remove('visible');
+document.getElementById('btn-stop-read').style.display = 'none';
+};
+utterance.onerror = () => {
+isReading = false;
+document.getElementById('read-progress').classList.remove('visible');
+};
+
+synth.speak(utterance);
+}
+
+function stopReading() {
+if (synth) {
+synth.cancel();
+}
+isReading = false;
+document.getElementById('read-progress').classList.remove('visible');
+document.getElementById('btn-stop-read').style.display = 'none';
+}
+
+// Load voices when ready
+if (synth.onvoiceschanged !== undefined) {
+synth.onvoiceschanged = () => synth.getVoices();
+}
+
+/* ===== LARGE TEXT TOGGLE ===== */
+function toggleLargeText() {
+const btn = document.getElementById('btn-large-text');
+const body = document.body;
+const active = body.classList.toggle('large-text');
+btn.setAttribute('aria-pressed', active);
+btn.classList.toggle('active', active);
+localStorage.setItem('largeText', active);
+}
+
+/* ===== HIGH CONTRAST TOGGLE ===== */
+function toggleContrast() {
+const btn = document.getElementById('btn-contrast');
+const body = document.body;
+const active = body.classList.toggle('high-contrast');
+btn.setAttribute('aria-pressed', active);
+btn.classList.toggle('active', active);
+localStorage.setItem('highContrast', active);
+}
+
+/* ===== SCROLL TO CONTACT ===== */
+function scrollToContact() {
+document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+document.getElementById('contact').setAttribute('tabindex', '-1');
+document.getElementById('contact').focus();
+}
+
+/* ===== RESTORE PREFERENCES ===== */
+window.addEventListener('DOMContentLoaded', () => {
+if (localStorage.getItem('largeText') === 'true') {
+document.body.classList.add('large-text');
+document.getElementById('btn-large-text').classList.add('active');
+document.getElementById('btn-large-text').setAttribute('aria-pressed', 'true');
+}
+if (localStorage.getItem('highContrast') === 'true') {
+document.body.classList.add('high-contrast');
+document.getElementById('btn-contrast').classList.add('active');
+document.getElementById('btn-contrast').setAttribute('aria-pressed', 'true');
+}
+});
+
+/* ===== KEYBOARD NAVIGATION ANNOUNCER ===== */
+const liveRegion = document.createElement('div');
+liveRegion.setAttribute('aria-live', 'polite');
+liveRegion.setAttribute('aria-atomic', 'true');
+liveRegion.className = 'sr-only';
+liveRegion.id = 'live-region';
+document.body.appendChild(liveRegion);
+
+function announce(msg) {
+document.getElementById('live-region').textContent = '';
+setTimeout(() => {
+document.getElementById('live-region').textContent = msg;
+}, 100);
+}
+
+/* Announce when entering major sections */
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(e => {
+if (e.isIntersecting && e.intersectionRatio > 0.5) {
+const title = e.target.querySelector('h2');
+if (title) announce('נכנסתם לקטע: ' + title.textContent);
+}
+});
+}, { threshold: 0.5 });
+
+document.querySelectorAll('section[aria-labelledby]').forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
